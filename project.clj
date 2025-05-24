@@ -1,12 +1,9 @@
 (defproject com.hyperphor/way-demo "0.1.7" 
   :description "Way"
   :url "https://shrouded-escarpment-03060-744eda4cc53f.herokuapp.com/"
-  :plugins [[lein-shadow "0.4.1"]]
+  ;; :plugins [[lein-shadow "0.4.1"]]
   :dependencies [[org.clojure/clojure "1.12.0"]
-                 #_ [org.clojure/clojurescript "1.11.60"] ;Causes dep problem (→ cheshire → jackson)
-                 #_ [com.google.javascript/closure-compiler-unshaded "v20230802"]
-
-                 [com.hyperphor/way "0.1.7"]
+                 [com.hyperphor/way "0.1.13"]
                  ]
   :main ^:skip-aot com.hyperphor.way.demo.core
   :source-paths ["src/cljc" "src/clj" "src/cljs"] 
@@ -19,7 +16,8 @@
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
                        }}
 
-  :shadow-cljs {:lein true
+  #_
+  :shadow-cljs #_ {:lein true
                 :builds
                 {:app {:target :browser
                        :compiler-options {:infer-externs true}

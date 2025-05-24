@@ -8,9 +8,9 @@
         "test": "test"
     },
     "dependencies": {
-        "@blocknote/core": "^0.15.10",
-        "@blocknote/mantine": "^0.15.10",
-        "@blocknote/react": "^0.15.10",
+        "@blocknote/core": "^0.31.0",
+        "@blocknote/mantine": "^0.31.0",
+        "@blocknote/react": "^0.31.0",
         "ag-grid-community": "^31.0.1",
         "ag-grid-enterprise": "^31.3.4",
         "ag-grid-react": "^31.3.4",
