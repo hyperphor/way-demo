@@ -12,7 +12,9 @@
         vertical? @(rf/subscribe [:form-field-value [:violin :vertical?]])]
     [:div
      [:div.wform
-      (form/form-field-row {:type :boolean :label "vertical?" :path [:violin :vertical?]})]
+      (form/form-field-row
+       {:type :boolean :label "vertical?" :path [:violin :vertical?]}
+       {})]
      [vi/violin data :final_diagnosis :feature_value {:vertical? vertical?
                                                       :patches {:axes [{:title "CD133"} nil]}}]
      ])) 
