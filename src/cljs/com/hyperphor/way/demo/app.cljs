@@ -4,6 +4,7 @@
    [goog.dom :as gdom]
    [reagent.core :as r]
    [re-frame.core :as rf]
+   [com.hyperphor.way.ui.config :as config]
    [com.hyperphor.way.ui.init :as init]
    [com.hyperphor.way.tabs :as tabs]
    [com.hyperphor.way.flash :as flash]
@@ -60,7 +61,7 @@
      " of use."]
     [:h2 {:id "license"} "Credits"]
     [:p "Designed and coded by Mike Travers"]
-    [:p "Copyright © 2020-24 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
+    [:p "Copyright © 2020-2025 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
 
 (defn header
   []
@@ -77,7 +78,7 @@
    [modal/modal]
    [header]
    [flash/flash]
-   [tabs/tabs
+   [tabs/tabs-nav
     :tab
     (array-map
      :home about
@@ -95,4 +96,5 @@
 
 (defn ^:export init
   []
-  (init/init app-ui nil))
+  (init/init app-ui nil)
+  )
