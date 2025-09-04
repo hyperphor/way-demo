@@ -1,10 +1,7 @@
 (ns com.hyperphor.way.demo.app
   (:require
    ["react-dom/client" :refer [createRoot]]
-   [goog.dom :as gdom]
-   [reagent.core :as r]
    [re-frame.core :as rf]
-   [com.hyperphor.way.ui.config :as config]
    [com.hyperphor.way.ui.init :as init]
    [com.hyperphor.way.tabs :as tabs]
    [com.hyperphor.way.flash :as flash]
@@ -18,8 +15,6 @@
    [com.hyperphor.way.demo.lline :as lline]
    [com.hyperphor.way.demo.forms :as forms]
    [com.hyperphor.way.demo.draggable :as drag]
-   [org.candelbio.multitool.core :as u]
-   [org.candelbio.multitool.browser :as browser]
    )) 
 
 (def debug?
