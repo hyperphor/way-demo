@@ -17,6 +17,7 @@
    [com.hyperphor.way.demo.grid :as grid]
    [com.hyperphor.way.demo.lline :as lline]
    [com.hyperphor.way.demo.forms :as forms]
+   [com.hyperphor.way.demo.draggable :as drag]
    [org.candelbio.multitool.core :as u]
    [org.candelbio.multitool.browser :as browser]
    )) 
@@ -90,6 +91,7 @@
      :heatmap_flex hm2/ui
      :violin vi/ui
      :rich_text bn/main-page
+     :draggable drag/view
      )]
    #_ [footer]
    ])
