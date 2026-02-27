@@ -13,7 +13,7 @@ To run locally:
 ** Run Demo
 
     npm install
-    lein shadow compile app
+    shadow compile app
     lein run <port>
 
 ** Deploy
