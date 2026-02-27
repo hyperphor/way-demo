@@ -33,7 +33,9 @@
    "https://raw.githubusercontent.com/zief0002/modeling/main/data/fertility.csv"
    [:region :gni_class :fertility_rate {}]
 
-   "https://www.cdc.gov/niosh/data/datasets/rd-1064-2023-0/files/Liver-gene-expression.csv"
+   ;; I blame Donald Trump
+   #_"https://www.cdc.gov/niosh/data/datasets/rd-1064-2023-0/files/Liver-gene-expression.csv"
+   "https://web.archive.org/web/20240516094847/https://www.cdc.gov/niosh/data/datasets/rd-1064-2023-0/files/Liver-gene-expression.csv"
    [:gene :treatment :fold_change]
    ;; 4M rows, too big to handle
    #_ "https://media.githubusercontent.com/media/ahmedmoustafa/gene-expression-datasets/main/datasets/medulloblastoma/medulloblastoma.long.tsv"

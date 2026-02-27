@@ -1,8 +1,6 @@
 (ns com.hyperphor.way.demo.app
   (:require
    ["react-dom/client" :refer [createRoot]]
-   [goog.dom :as gdom]
-   [reagent.core :as r]
    [re-frame.core :as rf]
    [com.hyperphor.way.ui.init :as init]
    [com.hyperphor.way.tabs :as tabs]
@@ -16,8 +14,7 @@
    [com.hyperphor.way.demo.grid :as grid]
    [com.hyperphor.way.demo.lline :as lline]
    [com.hyperphor.way.demo.forms :as forms]
-   [org.candelbio.multitool.core :as u]
-   [org.candelbio.multitool.browser :as browser]
+   [com.hyperphor.way.demo.draggable :as drag]
    )) 
 
 (def debug?
@@ -60,7 +57,7 @@
      " of use."]
     [:h2 {:id "license"} "Credits"]
     [:p "Designed and coded by Mike Travers"]
-    [:p "Copyright © 2020-24 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
+    [:p "Copyright © 2020-2025 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
 
 (defn header
   []
@@ -77,7 +74,7 @@
    [modal/modal]
    [header]
    [flash/flash]
-   [tabs/tabs
+   [tabs/tabs-nav
     :tab
     (array-map
      :home about
@@ -89,10 +86,12 @@
      :heatmap_flex hm2/ui
      :violin vi/ui
      :rich_text bn/main-page
+     :draggable drag/view
      )]
    #_ [footer]
    ])
 
 (defn ^:export init
   []
-  (init/init app-ui nil))
+  (init/init app-ui nil)
+  )

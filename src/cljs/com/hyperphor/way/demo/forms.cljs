@@ -23,6 +23,8 @@
       :doc [:span "One or a fixed set " [:a {:href "https://en.wikipedia.org/wiki/Middle-earth_peoples" :target "_ref"} "ref"]]}
      {:path [:form-demo :select] :type :select :options ["Male" "Female" "Agender" "Polygender" "Prefer not to say"] :doc [:span [:b "Also"] " one or a fixed set"]}
      {:path [:form-demo :textarea] :type :textarea :doc "Bigger text"}
+     {:path [:form-demo :slider] :type :slider :min 0 :max 100 :doc "Slider"}
+     {:path [:form-demo :range] :type :range :min 0 :max 100 :doc "Range"}
      {:path [:form-demo :local-files] :type :local-files :doc "Local files for uploading"}
      {:path [:form-demo :local-directory] :type :local-directory :doc "A local directory for uploading"}]
     #(rf/dispatch [:flash {:message (str "Submitted: " %) :class "alert-success" }])

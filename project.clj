@@ -3,10 +3,7 @@
   :url "https://shrouded-escarpment-03060-744eda4cc53f.herokuapp.com/"
   :plugins [[lein-shadow "0.4.1"]]
   :dependencies [[org.clojure/clojure "1.12.0"]
-                 #_ [org.clojure/clojurescript "1.11.60"] ;Causes dep problem (→ cheshire → jackson)
-                 #_ [com.google.javascript/closure-compiler-unshaded "v20230802"]
-
-                 [com.hyperphor/way "0.1.7"]
+                 [com.hyperphor/way "0.1.19"]
                  ]
   :main ^:skip-aot com.hyperphor.way.demo.core
   :source-paths ["src/cljc" "src/clj" "src/cljs"] 
@@ -17,7 +14,11 @@
                        :prep-tasks [["shadow" "release" "app"] "javac" "compile"] ;NOTE if you omit the javac compile items, :aot stops working!  "javac" "compile"
                        :resource-paths ["resources"]
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
-                       }}
+                       }
+             :dev {:dependencies [[thheller/shadow-cljs "3.1.7"]
+                                  [day8.re-frame/tracing "0.6.2"]     
+                                  [day8.re-frame/re-frame-10x "1.9.9"]]}
+             }
 
   :shadow-cljs {:lein true
                 :builds

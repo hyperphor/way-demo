@@ -1,1 +1,22 @@
 Demo site for [[https://github.com/mtravers/way][Way]]. Running on [[https://way-demo-4ed0361a3a3b.herokuapp.com/][Heroku]].
+
+* Development
+
+To run locally:
+
+**  Install
+
+- Java
+- NodeJS
+- Leiningen
+    
+** Run Demo
+
+    npm install
+    lein shadow compile app
+    lein run <port>
+
+** Deploy
+
+bin/deploy.sh
+
