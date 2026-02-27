@@ -1,10 +1,10 @@
-(ns com.hyperphor.way.demo.core
+(ns hyperphor.way.demo.core
   (:gen-class)
-  (:require [com.hyperphor.way.server :as server]
-            [com.hyperphor.way.demo.handler :as handler]
+  (:require [hyperphor.way.server :as server]
+            [hyperphor.way.demo.handler :as handler]
             [org.candelbio.multitool.cljcore :as ju]
             [taoensso.timbre :as log]
-            [com.hyperphor.way.config :as config]
+            [hyperphor.way.config :as config]
             [environ.core :as env]))
 
 (defn -main

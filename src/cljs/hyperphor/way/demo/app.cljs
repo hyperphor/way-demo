@@ -1,20 +1,20 @@
-(ns com.hyperphor.way.demo.app
+(ns hyperphor.way.demo.app
   (:require
    ["react-dom/client" :refer [createRoot]]
    [re-frame.core :as rf]
-   [com.hyperphor.way.ui.init :as init]
-   [com.hyperphor.way.tabs :as tabs]
-   [com.hyperphor.way.flash :as flash]
-   [com.hyperphor.way.modal :as modal]
-   [com.hyperphor.way.web-utils :as wu]
-   [com.hyperphor.way.demo.heatmap :as hm]
-   [com.hyperphor.way.demo.heatmap2 :as hm2]
-   [com.hyperphor.way.demo.violin :as vi]
-   [com.hyperphor.way.demo.blocknote :as bn]
-   [com.hyperphor.way.demo.grid :as grid]
-   [com.hyperphor.way.demo.lline :as lline]
-   [com.hyperphor.way.demo.forms :as forms]
-   [com.hyperphor.way.demo.draggable :as drag]
+   [hyperphor.way.ui.init :as init]
+   [hyperphor.way.tabs :as tabs]
+   [hyperphor.way.flash :as flash]
+   [hyperphor.way.modal :as modal]
+   [hyperphor.way.web-utils :as wu]
+   [hyperphor.way.demo.heatmap :as hm]
+   [hyperphor.way.demo.heatmap2 :as hm2]
+   [hyperphor.way.demo.violin :as vi]
+   [hyperphor.way.demo.blocknote :as bn]
+   [hyperphor.way.demo.grid :as grid]
+   [hyperphor.way.demo.lline :as lline]
+   [hyperphor.way.demo.forms :as forms]
+   [hyperphor.way.demo.draggable :as drag]
    )) 
 
 (def debug?

@@ -1,9 +1,9 @@
-(ns com.hyperphor.way.demo.handler
+(ns hyperphor.way.demo.handler
   (:require [compojure.core :refer [defroutes context GET POST make-route routes]]
             [ring.util.response :as response]
-            [com.hyperphor.way.demo.dbpedia :as dbpedia]
-            [com.hyperphor.way.handler :as wh]
-            [com.hyperphor.way.views.html :as html]
+            [hyperphor.way.demo.dbpedia :as dbpedia]
+            [hyperphor.way.handler :as wh]
+            [hyperphor.way.views.html :as html]
             )
   (:use [hiccup.core])
   )

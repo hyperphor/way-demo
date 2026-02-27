@@ -1,6 +1,6 @@
-(ns com.hyperphor.way.demo.grid
-  (:require [com.hyperphor.way.feeds :as f]
-            [com.hyperphor.way.aggrid :as ag]))
+(ns hyperphor.way.demo.grid
+  (:require [hyperphor.way.feeds :as f]
+            [hyperphor.way.aggrid :as ag]))
 
 (defn ui
   []

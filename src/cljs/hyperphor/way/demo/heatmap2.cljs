@@ -1,9 +1,9 @@
-(ns com.hyperphor.way.demo.heatmap2
-  (:require [com.hyperphor.way.cheatmap :as ch]
-            [com.hyperphor.way.params :as p]
-            [com.hyperphor.way.feeds :as f]
-            [com.hyperphor.way.vega :as v]
-            [com.hyperphor.way.web-utils :as wu]
+(ns hyperphor.way.demo.heatmap2
+  (:require [hyperphor.way.cheatmap :as ch]
+            [hyperphor.way.params :as p]
+            [hyperphor.way.feeds :as f]
+            [hyperphor.way.vega :as v]
+            [hyperphor.way.web-utils :as wu]
             ))
 
 ;;; TODO a lot of these aren't really great examples of clustering, find some better ones

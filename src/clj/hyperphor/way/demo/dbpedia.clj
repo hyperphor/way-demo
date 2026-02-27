@@ -1,4 +1,4 @@
-(ns com.hyperphor.way.demo.dbpedia
+(ns hyperphor.way.demo.dbpedia
   (:require [clj-http.client :as client]
             [org.candelbio.multitool.core :as u]
             [clojure.string :as str]

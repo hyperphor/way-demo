@@ -1,7 +1,7 @@
 {
-    "name": "com.hyperphor.way-demo",
-    "version": "1.0.0",
-    "description": "Demo for Way, a data-oriented website plaftorm",
+    "name": "hyperphor.way-demo",
+    "version": "0.2.1",
+    "description": "Demo for Way, a data-oriented website platform",
     "main": "index.js",
     "directories": {
         "doc": "doc",

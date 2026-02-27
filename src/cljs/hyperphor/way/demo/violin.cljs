@@ -1,7 +1,7 @@
-(ns com.hyperphor.way.demo.violin
-  (:require [com.hyperphor.way.violin :as vi]
-            [com.hyperphor.way.form :as form]
-            [com.hyperphor.way.feeds :as f]
+(ns hyperphor.way.demo.violin
+  (:require [hyperphor.way.violin :as vi]
+            [hyperphor.way.form :as form]
+            [hyperphor.way.feeds :as f]
             [re-frame.core :as rf]
             )
   )

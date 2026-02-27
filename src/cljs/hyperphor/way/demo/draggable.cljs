@@ -1,9 +1,9 @@
-(ns com.hyperphor.way.demo.draggable
+(ns hyperphor.way.demo.draggable
   (:require
    [re-frame.core :as rf]
    [org.candelbio.multitool.core :as u]
-   [com.hyperphor.way.form :as f]
-   [com.hyperphor.way.draggable :as d]
+   [hyperphor.way.form :as f]
+   [hyperphor.way.draggable :as d]
    ["markdown-it" :as MarkdownIt]
    ))
 
