@@ -9,7 +9,7 @@
 
   :profiles {:uberjar {:aot :all
                        ;; :omit-source true
-                       :prep-tasks [["shadow" "release" "app"] "javac" "compile"] ;NOTE if you omit the javac compile items, :aot stops working!  "javac" "compile"
+                       :prep-tasks [#_ ["shadow" "release" "app"] "javac" "compile"] ;NOTE if you omit the javac compile items, :aot stops working!  "javac" "compile"
                        :resource-paths ["resources"]
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
                        }
