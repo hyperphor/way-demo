@@ -57,7 +57,7 @@
      " of use."]
     [:h2 {:id "license"} "Credits"]
     [:p "Designed and coded by Mike Travers"]
-    [:p "Copyright © 2020-2025 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
+    [:p "Copyright © 2020-2026 " [:a {:href "http://hyperphor.com"} "Hyperphor"]]]])
 
 (defn header
   []
@@ -88,7 +88,6 @@
      :rich_text bn/main-page
      :draggable drag/view
      )]
-   #_ [footer]
    ])
 
 (defn ^:export init

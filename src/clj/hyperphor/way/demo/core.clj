@@ -2,7 +2,7 @@
   (:gen-class)
   (:require [hyperphor.way.server :as server]
             [hyperphor.way.demo.handler :as handler]
-            [org.candelbio.multitool.cljcore :as ju]
+            [hyperphor.multitool.cljcore :as ju]
             [taoensso.timbre :as log]
             [hyperphor.way.config :as config]
             [environ.core :as env]))

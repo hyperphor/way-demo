@@ -114,8 +114,7 @@ you, this is pretty basic
 
           ]]]))])
 
-;;; → Multitool (has a different definition)
-;;; TODO val could be predicate
+;;; Note: Multitool (has a different definition)
 (defn dissoc-if
   [map key val]
   (if (= val (key map))

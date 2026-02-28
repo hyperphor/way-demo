@@ -1,8 +1,8 @@
-(defproject hyperphor/way-demo "0.2.1" 
+(defproject hyperphor/way-demo "0.2.2" 
   :description "Way"
   :url "https://shrouded-escarpment-03060-744eda4cc53f.herokuapp.com/"
   :dependencies [[org.clojure/clojure "1.12.4"]
-                 [com.hyperphor/way "0.2.1"]]
+                 [com.hyperphor/way "0.2.2"]]
   :main ^:skip-aot hyperphor.way.demo.core
   :source-paths ["src/cljc" "src/clj" "src/cljs"] 
   :clean-targets ^{:protect false} ["target" ".shadow-cljs" "resources/public/cljs-out"]

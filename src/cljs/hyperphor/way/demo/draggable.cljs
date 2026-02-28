@@ -1,7 +1,6 @@
 (ns hyperphor.way.demo.draggable
   (:require
    [re-frame.core :as rf]
-   [org.candelbio.multitool.core :as u]
    [hyperphor.way.form :as f]
    [hyperphor.way.draggable :as d]
    ["markdown-it" :as MarkdownIt]
