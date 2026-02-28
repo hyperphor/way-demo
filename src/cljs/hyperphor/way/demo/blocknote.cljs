@@ -1,11 +1,11 @@
-(ns com.hyperphor.way.demo.blocknote
+(ns hyperphor.way.demo.blocknote
   (:require ["@blocknote/mantine" :as bn]
             ["@blocknote/react" :as br]
             [reagent.core :as reagent]
             [re-frame.core :as rf]
             [clojure.pprint :as pprint]
             [clojure.walk :as walk]
-            [com.hyperphor.way.form :as wf]
+            [hyperphor.way.form :as wf]
             ))
 
 ;;; Demo integration of Blocknote https://www.blocknotejs.org/
@@ -114,8 +114,7 @@ you, this is pretty basic
 
           ]]]))])
 
-;;; → Multitool (has a different definition)
-;;; TODO val could be predicate
+;;; Note: Multitool (has a different definition)
 (defn dissoc-if
   [map key val]
   (if (= val (key map))

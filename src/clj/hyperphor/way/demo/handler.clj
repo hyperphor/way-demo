@@ -1,39 +1,26 @@
-(ns com.hyperphor.way.demo.handler
+(ns hyperphor.way.demo.handler
   (:require [compojure.core :refer [defroutes context GET POST make-route routes]]
             [ring.util.response :as response]
-            [com.hyperphor.way.demo.dbpedia :as dbpedia]
-            [com.hyperphor.way.handler :as wh]
-            [com.hyperphor.way.views.html :as html]
+            [hyperphor.way.demo.dbpedia :as dbpedia]
+            [hyperphor.way.handler :as wh]
+            [hyperphor.way.views.html :as html]
             )
   (:use [hiccup.core])
   )
 
-;;; Standin sample view
-(defn country-view
-  [id]
-  (response/content-type
-   (wh/content-response
-    (html/html-frame
-     {} (str "Country " id)
-     [:div
-      [:h3 "Your guide to scenic " id]
-      (dbpedia/entity-content id)
-      ]))
-   "text/html"))
-
+;;; Sample server-side rendering
 (defn dbpedia-view
   [id]
   (response/content-type
    (wh/content-response
     (html/html-frame
-     {} (str "DBPedia on " id)
+     {} (str "DBPedia/" id)             ;TODO extend html-frame to support hierarchical paths
      [:div
       (dbpedia/entity-content id)
       ]))
    "text/html"))
 
 (defroutes site-routes
-  (GET "/country/:id" [id] (country-view id) )
   (GET "/dbpedia/:id" [id] (dbpedia-view id) )
   )
 

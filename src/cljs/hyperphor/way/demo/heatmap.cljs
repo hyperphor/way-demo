@@ -1,5 +1,5 @@
-(ns com.hyperphor.way.demo.heatmap
-  (:require [com.hyperphor.way.cheatmap :as ch]))
+(ns hyperphor.way.demo.heatmap
+  (:require [hyperphor.way.cheatmap :as ch]))
 
 (def data2
   '({:gene "WNT2", :sample "508", :value 4.69455368790816}

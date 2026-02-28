@@ -1,8 +1,10 @@
-(ns com.hyperphor.way.demo.dbpedia
+(ns hyperphor.way.demo.dbpedia
   (:require [clj-http.client :as client]
-            [org.candelbio.multitool.core :as u]
+            [hyperphor.multitool.core :as u]
             [clojure.string :as str]
             ))
+
+;;; Provides a staticly-rendered view of a DBPedia entry. 
 
 ;;; :@foo breaks Clojure reader, but this works
 (u/defn-memoized atkey
@@ -28,7 +30,6 @@
         :else
         (cons (first seq) (cons sep (join-seq sep (rest seq))))))
 
-;;; TODO linkify ordinary URLs
 (defn render-value
   [v]
   (cond (and (map? v) (get v (atkey :value))) (get v (atkey :value))
@@ -46,11 +47,12 @@
   [ent]
   (let [ld (:body (client/get (str "http://dbpedia.org/resource/" ent)
                               {:as :json :accept "application/ld+json"}))
-        graph (first (get ld (keyword "@graph")))
-        ]
-    [:table.table-bordered
+        graph (first (get ld (keyword "@graph")))]
+    [:div
+     [:a {:href (str "http://dbpedia.org/page/" ent)} "View at DBPedia"]
+    [:table.table.table-bordered
      (for [[k v] graph]
        [:tr
         [:th (name k)]
-        [:td (render-value v)]])]))
+        [:td (render-value v)]])]]))
 

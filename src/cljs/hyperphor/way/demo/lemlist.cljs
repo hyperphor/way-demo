@@ -1,5 +1,5 @@
-(ns com.hyperphor.way.demo.lemlist
-  (:require [com.hyperphor.way.vega :as v]
+(ns hyperphor.way.demo.lemlist
+  (:require [hyperphor.way.vega :as v]
             ))
 
 ;; Full

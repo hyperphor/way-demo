@@ -1,6 +1,6 @@
-(ns com.hyperphor.way.demo.lline
+(ns hyperphor.way.demo.lline
   (:require [reagent.core :as reagent]
-            [com.hyperphor.way.form :as f]
+            [hyperphor.way.form :as f]
             [re-frame.core :as rf]
             ))
 

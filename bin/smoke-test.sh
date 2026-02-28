@@ -1,3 +1,6 @@
 # Verify that demo builds and runs
 # TODO version suitable for CI
-lein do clean, shadow compile app, run 1881
+lein clean
+shadow-cljs release app
+lein run 1881
+

@@ -1,5 +1,5 @@
-(ns com.hyperphor.way.demo.forms
-  (:require [com.hyperphor.way.form :as f]
+(ns hyperphor.way.demo.forms
+  (:require [hyperphor.way.form :as f]
             [clojure.pprint :as pprint]
             [re-frame.core :as rf]
             ))
