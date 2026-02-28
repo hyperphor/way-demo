@@ -1,15 +1,18 @@
 (defproject hyperphor/way-demo "0.2.2" 
   :description "Way"
   :url "https://shrouded-escarpment-03060-744eda4cc53f.herokuapp.com/"
+  :plugins [[lein-shell "0.5.0"]]
   :dependencies [[org.clojure/clojure "1.12.4"]
                  [com.hyperphor/way "0.2.2"]]
   :main ^:skip-aot hyperphor.way.demo.core
   :source-paths ["src/cljc" "src/clj" "src/cljs"] 
-  :clean-targets ^{:protect false} ["target" ".shadow-cljs" "resources/public/cljs-out"]
+  :clean-targets  ^{:protect false} ["target" ".shadow-cljs" "resources/public/cljs-out"]
 
   :profiles {:uberjar {:aot :all
-                       ;; :omit-source true
-                       :prep-tasks [#_ ["shadow" "release" "app"] "javac" "compile"] ;NOTE if you omit the javac compile items, :aot stops working!  "javac" "compile"
+                       :omit-source true
+                       :prep-tasks [["shell" "shadow-cljs" "release" "app"]
+                                    "javac" ;NOTE if you omit the javac compile items, :aot stops working! 
+                                    "compile"] 
                        :resource-paths ["resources"]
                        :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
                        }
