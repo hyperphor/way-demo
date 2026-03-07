@@ -8,12 +8,14 @@
             [environ.core :as env]))
 
 (defn -main
-  [& args]
-  (config/read-config "config.edn")
-  (let [port (or (first args) (env/env :port) )] ;Set by Heroku
+  [& [port config]]
+  (let [port (or port (env/env :port))
+        config (or config "config.edn")]
+    (config/read-config config)
     (log/info "Starting server on port" port)
     (server/start (Integer. port) (handler/app))
-    ;; Smart enough to be a no-op on server
     (ju/open-url (format "http://localhost:%s" port))
     ))
+
+
 

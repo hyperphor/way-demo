@@ -8,4 +8,5 @@
    :callback #env OAUTH_CALLBACK  ; "https://<host>/oauth2/google/callback"
    :signin-text "Welcom to Way"
    }
+  :dev-mode true
   }]

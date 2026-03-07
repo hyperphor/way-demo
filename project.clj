@@ -3,7 +3,7 @@
   :url "https://shrouded-escarpment-03060-744eda4cc53f.herokuapp.com/"
   :plugins [[lein-shell "0.5.0"]]
   :dependencies [[org.clojure/clojure "1.12.4"]
-                 [com.hyperphor/way "0.2.2"]]
+                 [com.hyperphor/way "0.2.3"]]
   :main ^:skip-aot hyperphor.way.demo.core
   :source-paths ["src/cljc" "src/clj" "src/cljs"] 
   :clean-targets  ^{:protect false} ["target" ".shadow-cljs" "resources/public/cljs-out"]
